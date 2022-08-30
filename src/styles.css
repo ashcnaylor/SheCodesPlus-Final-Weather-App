@@ -1,3 +1,9 @@
+body {
+  background-image: url("img/default-weather.jpg");
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+}
 h1 {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -6,7 +12,7 @@ h1 {
 }
 
 .container {
-  background-color: #7fa99b;
+  background-color: whitesmoke;
   border: 1px solid black;
   border-radius: 6px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -15,6 +21,7 @@ h1 {
   display: block;
   margin: 30px auto;
   max-width: 600px;
+  opacity: 0.93;
 }
 
 .current {
