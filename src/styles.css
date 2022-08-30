@@ -1,1 +1,129 @@
+h1 {
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 10px;
+  text-align: center;
+}
 
+.container {
+  background-color: #7fa99b;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: block;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.current {
+  background-color: #fbf2d5;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 10px;
+  padding: 5px;
+  margin: 0px 50px;
+}
+
+.current-city {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 45px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.current-conditions {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.current-icon {
+  font-size: 120px;
+  text-align: center;
+}
+
+.current-temp {
+  font-size: 75px;
+  text-align: center;
+}
+
+.current-date-and-time {
+  border: 1px solid black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 14px;
+  max-width: 135px;
+  position: relative;
+  left: 55px;
+  text-align: center;
+}
+
+.forcast {
+  margin: 10px 45px;
+  padding: 10px;
+}
+
+.forcast-day {
+  background-color: #fdc57b;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px;
+  color: black;
+  text-align: center;
+  margin: 3px;
+}
+
+.forcast-icon {
+  background-color: white;
+  border-radius: 25% 10%;
+  font-size: 27px;
+}
+
+.geo-locate {
+  background-color: #fdc57b;
+  border-radius: 4px;
+  color: #384a51;
+  font-size: 12px;
+  position: relative;
+  right: 12px;
+  top: -2px;
+  transition: all 0.3 ease 0;
+}
+
+.open-source-link {
+  font-size: 11px;
+  text-align: left;
+  padding: 3px;
+}
+
+.search {
+  background-color: #384a51;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: #384a51;
+  margin: 5px 60px 10px;
+  padding: 15px;
+}
+
+.search-button {
+  background-color: #fdc57b;
+  border-radius: 4px;
+  color: #384a51;
+  font-size: 17px;
+  position: relative;
+  top: 3px;
+  transition: all 0.3 ease 0;
+}
+
+.search-button:hover {
+  background-color: #fbf2d5;
+}
+
+.unit-button {
+  font-size: 20px;
+  border: none;
+  background-color: #fbf2d5;
+  text-decoration: underline;
+}

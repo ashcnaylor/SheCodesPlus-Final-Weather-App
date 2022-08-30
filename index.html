@@ -14,7 +14,96 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <h1>What's the weather?</h1>
+      <div class="search">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter city name"
+                id="search-city"
+                autofocus
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                id="submit-city"
+                value="Search"
+                class="search-button"
+              />
+            </div>
+            <div class="col-3">
+              <button id="geo-locate" class="geo-locate">
+                Current Location
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <form>
+        <div class="row current">
+          <div class="col">
+            <h2 class="current-city" id="current-city">Enter City</h2>
+            <div class="current-date-and-time" id="current-date">
+              Tuesday, Aug 01, 2022 2:45pm
+            </div>
+            <div class="current-temp">
+              <span id="current-temp">00</span>
+            </div>
+          </div>
+          <div class="col current-conditions">
+            <div class="current-icon">🌤</div>
+            <h3 id="current-conditions">Mostly Sunny</h3>
+            <p>
+              Precipitation 10%
+              <br />
+              Wind 7mph
+            </p>
+          </div>
+        </div>
+      </form>
+      <form>
+        <div class="row forcast">
+          <div class="col forcast-day">
+            Wed
+            <div class="forcast-icon">🌤</div>
+            74°F
+          </div>
+          <div class="col forcast-day">
+            Thurs
+            <div class="forcast-icon">🌤</div>
+            72°F
+          </div>
+          <div class="col forcast-day">
+            Fri
+            <div class="forcast-icon">🌤</div>
+            75°F
+          </div>
+          <div class="col forcast-day">
+            Sat
+            <div class="forcast-icon">🌤</div>
+            76°F
+          </div>
+          <div class="col forcast-day">
+            Sun
+            <div class="forcast-icon">🌤</div>
+            74°F
+          </div>
+        </div>
+      </form>
+      <div class="open-source-link">
+        <a
+          href="https://github.com/ashcnaylor/SheCodes-Weather-App"
+          target="_blank"
+          >Open-source code</a
+        >
+        <span>by Ash Naylor</span>
+      </div>
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
