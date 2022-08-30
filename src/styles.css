@@ -1,14 +1,18 @@
-body {
-  background-image: url("img/default-weather.jpg");
-  background-color: white;
-  background-position: center;
-  background-size: cover;
-}
 h1 {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 10px;
   text-align: center;
+}
+
+.bg-img {
+  min-width: 1024px;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .container {
