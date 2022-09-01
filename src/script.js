@@ -34,13 +34,19 @@ currentDate.innerHTML = `${day}, ${month} ${date}, ${year}, ${time}`;
 function displayWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempDisplay = document.querySelector("#current-temp");
-  tempDisplay.innerHTML = `${temperature}°F`;
+  tempDisplay.innerHTML = `${temperature}`;
 }
 
 function displayConditions(response) {
   let currentConditions = response.data.weather[0].description;
   let conditionsDisplay = document.querySelector("#current-conditions");
+  let currentHumidity = response.data.main.humidity;
+  let humidityDisplay = document.querySelector("#humidity");
+  let currentWind = response.data.wind.speed;
+  let windDisplay = document.querySelector("#wind");
   conditionsDisplay.innerHTML = `${currentConditions}`;
+  humidityDisplay.innerHTML = `${currentHumidity}`;
+  windDisplay.innerHTML = `${currentWind}`;
 }
 
 function displayLocalCityName(response) {
@@ -68,6 +74,7 @@ function showPositionWeather(position) {
   let localApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${localApiKey}&units=imperial`;
   axios.get(localApiUrl).then(displayWeather);
   axios.get(localApiUrl).then(displayLocalCityName);
+  axios.get(localApiUrl).then(displayConditions);
 }
 
 let button = document.querySelector("#geo-locate");

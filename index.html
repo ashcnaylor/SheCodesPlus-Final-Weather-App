@@ -10,6 +10,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
@@ -56,19 +57,14 @@
             </div>
             <div class="current-temp">
               <span id="current-temp">00</span>
-              <span class="units">°C|°F</span>
+              <span class="units">°F|°C</span>
             </div>
           </div>
           <div class="col current-conditions">
             <div class="current-icon">🌤</div>
             <h3 id="current-conditions">Mostly Sunny</h3>
-            <p>
-              Precipitation 10%
-              <br />
-              Humidity
-              <br />
-              Wind 7mph
-            </p>
+            <div>Humidity: <span id="humidity">00</span>%</div>
+            <div>Wind: <span id="wind">00</span>mph</div>
           </div>
         </div>
       </form>
