@@ -38,15 +38,17 @@ function displayWeather(response) {
 }
 
 function displayConditions(response) {
-  let currentConditions = response.data.weather[0].description;
   let conditionsDisplay = document.querySelector("#current-conditions");
-  let currentHumidity = response.data.main.humidity;
   let humidityDisplay = document.querySelector("#humidity");
-  let currentWind = response.data.wind.speed;
   let windDisplay = document.querySelector("#wind");
-  conditionsDisplay.innerHTML = `${currentConditions}`;
-  humidityDisplay.innerHTML = `${currentHumidity}`;
-  windDisplay.innerHTML = `${currentWind}`;
+  let iconDisplay = document.querySelector("#icon");
+  conditionsDisplay.innerHTML = `${response.data.weather[0].description}`;
+  humidityDisplay.innerHTML = `${response.data.main.humidity}`;
+  windDisplay.innerHTML = `${response.data.wind.speed}`;
+  iconDisplay.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function displayLocalCityName(response) {
