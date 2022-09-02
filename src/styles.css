@@ -47,6 +47,8 @@ h1 {
 .current-conditions {
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
+  position: relative;
+  top: -35px;
 }
 
 .current-icon {
@@ -69,11 +71,11 @@ h1 {
   border: 1px solid black;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
-  margin-bottom: 10px;
-  margin-top: 14px;
-  max-width: 135px;
+  margin-top: 20px;
+  max-width: 160px;
+  padding: 4px;
   position: relative;
-  left: 55px;
+  left: 26px;
   text-align: center;
 }
 
@@ -113,6 +115,7 @@ h1 {
   font-size: 11px;
   text-align: left;
   padding: 3px;
+  margin-top: 10px;
 }
 
 .search {

@@ -26,7 +26,10 @@ let months = [
 let month = months[now.getMonth()];
 let date = now.getDate();
 let year = now.getYear() - 100 + 2000;
-let time = now.toLocaleTimeString("en-US");
+let time = now.toLocaleTimeString("en-US", {
+  hour: "2-digit",
+  minute: "2-digit",
+});
 
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day}, ${month} ${date}, ${year}, ${time}`;
