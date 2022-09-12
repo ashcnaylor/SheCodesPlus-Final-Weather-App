@@ -35,7 +35,7 @@ let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day}, ${month} ${date}, ${year}, ${time}`;
 
 function getForecast(coordinates) {
-  let apiKey = "a43564c91a6c605aeb564c9ed02e3858";
+  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -53,26 +53,27 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row forecast">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col-2">
-        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+      <div class="col-2 forecast-day">
+        <div>${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
+          class="forecast-icon"
           width="42"
         />
-        <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
+        <div>
+          <span class="forecast-max"> ${Math.round(
             forecastDay.temp.max
           )}° </span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
+          <span class="forecast-min"> ${Math.round(
             forecastDay.temp.min
           )}° </span>
         </div>
