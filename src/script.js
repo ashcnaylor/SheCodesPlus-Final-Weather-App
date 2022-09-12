@@ -86,6 +86,23 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function changeBackground(icon) {
+  let background = document.querySelector("#bg");
+  if (icon === "02d" || icon === "03d" || icon === "04d") {
+    background.setAttribute("src", "src/img/partly-sunny.jpg");
+  } else if (icon === "01d" || icon === "01n") {
+    background.setAttribute("src", "src/img/sunny.jpg");
+  } else if (icon === "09d" || icon === "10d" || icon === "50d") {
+    background.setAttribute("src", "src/img/light-rain.jpg");
+  } else if (icon === "11d") {
+    background.setAttribute("src", "src/img/thunderstorm.jpg");
+  } else if (icon === "13d") {
+    background.setAttribute("src", "src/img/snow.jpg");
+  } else {
+    background.setAttribute("src", "src/img/default-weather.jpg");
+  }
+}
+
 function displayTemperature(response) {
   let tempDisplay = document.querySelector("#current-temp");
   fahrenheitTemp = response.data.main.temp;
@@ -106,6 +123,8 @@ function displayConditions(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  changeBackground(response.data.weather[0].icon);
 }
 
 function displayLocalCityName(response) {
