@@ -89,14 +89,25 @@ function displayForecast(response) {
 function changeBackground(icon) {
   let background = document.querySelector("#bg");
   if (icon === "02d" || icon === "03d" || icon === "04d") {
-    background.setAttribute("src", "src/img/partly-sunny.jpg");
-  } else if (icon === "01d" || icon === "01n") {
-    background.setAttribute("src", "src/img/sunny.jpg");
-  } else if (icon === "09d" || icon === "10d" || icon === "50d") {
-    background.setAttribute("src", "src/img/light-rain.jpg");
-  } else if (icon === "11d") {
-    background.setAttribute("src", "src/img/thunderstorm.jpg");
-  } else if (icon === "13d") {
+    background.setAttribute("src", "src/img/clouds.jpg");
+  } else if (icon === "02n" || icon === "03n" || icon === "04n") {
+    background.setAttribute("src", "src/img/clouds-night.jpg");
+  } else if (icon === "01d") {
+    background.setAttribute("src", "src/img/clear-sky.jpg");
+  } else if (icon === "01n") {
+    background.setAttribute("src", "src/img/clear-night.jpg");
+  } else if (
+    icon === "09d" ||
+    icon === "10d" ||
+    icon === "9n" ||
+    icon === "10n"
+  ) {
+    background.setAttribute("src", "src/img/rain.jpg");
+  } else if (icon === "50d" || icon === "50n") {
+    background.setAttribute("src", "src/img/haze.jpg");
+  } else if (icon === "11d" || icon === "11n") {
+    background.setAttribute("src", "src/img/Thunderstorms.jpg");
+  } else if (icon === "13d" || icon === "13n") {
     background.setAttribute("src", "src/img/snow.jpg");
   } else {
     background.setAttribute("src", "src/img/default-weather.jpg");
