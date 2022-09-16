@@ -186,9 +186,6 @@ function convertFahrenheit(event) {
 
 let fahrenheitTemp = null;
 
-let button = document.querySelector("#geo-locate");
-button.addEventListener("click", showPositionWeather);
-
 navigator.geolocation.getCurrentPosition(showPositionWeather);
 
 let searchCity = document.querySelector("#search-form");
